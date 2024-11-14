@@ -76,5 +76,5 @@ def menu():
         else:
             print("Неверный выбор. Попробуйте снова.")
 
-if name == "main":
+if __name__ == "__main__":
     menu()
