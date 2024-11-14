@@ -34,6 +34,10 @@ def process_matrix(matrix):
 
 def output_matrix(matrix):
     """Вывод матрицы."""
+    if not matrix:
+        print("Матрица пуста.")
+        return
+    
     for row in matrix:
         print("\t".join(map(str, row)))
 
@@ -60,7 +64,7 @@ def menu():
             result.clear()  # Сбрасываем результаты при генерации новых данных
         elif choice == '3':
             if not matrix:
-                print("Ошибка: матрица не введена.")
+                print("Ошибка: матрица не введена. Пожалуйста, введите данные или сгенерируйте их.")
                 continue
             result = process_matrix(matrix)
             print("Матрица обработана.")
